@@ -232,25 +232,28 @@ h4 {
 
 /* Packages Container */
 
-.grid-container {
+ .grid-container {
   display: grid;
   grid-gap: 50px;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 200px auto;
-  align-content: center;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto auto;
+  padding-top: 30px;
   width: 100%;
-  padding: 3em 2em 6em 2em;
-  margin-bottom: 2em;
+
+
 }
 
 .grid-container > div {
   text-align: center;
-}
+} 
 
-.packages {
+
+
+#packages {
   max-width: 800px;
   margin: auto auto;
   padding: 3em 0;
+
 }
 #packages-heading {
   font-size: 2.6rem;
@@ -395,6 +398,8 @@ footer {
 }
 
 .foot-nav {
+	display:flex;
+	justify-content:space-around;
 	font-family: "Staatliches", sans-serif;
 	font-size: 2em;
   text-align: center;
@@ -402,7 +407,7 @@ footer {
 }
 
 .foot-nav a {
-  margin-right: 4em;
+
   text-decoration: none;
 }
 
@@ -411,9 +416,12 @@ footer {
 }
 
 .foot-nav-2 {
+	display:flex;
+	justify-content: flex-end;
   text-align: right;
   text-decoration: none;
   margin-top: 2em;
+  
 }
 .foot-nav-2 a {
   text-decoration: none;
@@ -422,6 +430,7 @@ footer {
 .foot-nav-2 img {
   max-height: 100px;
   padding-right: 0.7em;
+
 }
 
 @media (max-width: 1025px) {
@@ -461,6 +470,17 @@ footer {
   position: relative;
   display: inline-block;
   cursor: pointer;
+   color: #0a1128;
+  font-family: "Staatliches", cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 5% 0 0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-align: right;
+  justify-content: space-between;
+  opacity: .85;
 }
 
 /* The actual popup (appears on top) */
@@ -496,6 +516,10 @@ footer {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
+}
+
+.popuptext p {
+padding: 0 0 0 30px;
 }
 
 /* Add animation (fade in the popup) */
