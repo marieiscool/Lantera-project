@@ -122,15 +122,27 @@ header {
   text-align: right;
 }
 
-.main-nav {
+#navbar {
   text-align: right;
-  padding: 0 0 2em 0;
+  padding: 0 0 .5em 0;
   justify-content: space-between;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 60px;
 }
 
 /* Nav links */
 
-.main-nav a {
+#navbar a {
   color: #0a1128;
   font-family: "Staatliches", cursive;
   font-weight: 700;
@@ -144,14 +156,14 @@ header {
 }
 
 /* Nav links - hover state */
-.main-nav a:hover {
+#navbar a:hover {
   color: #b7fb04;
   text-decoration: none;
   text-shadow: 2px 2px 12px #640035;
 }
 
 /* Target last anchor element in nav */
-.main-nav a:last-child {
+#navbar a:last-child {
   margin-right: 1em;
 }
 
@@ -159,7 +171,7 @@ header {
   .main-header {
     min-height: auto;
   }
-  .main-nav a {
+  #navbar a {
     text-align: center;
     padding: 3% 3% 3% 0;
   }
@@ -351,39 +363,11 @@ h4 {
   }
 
   }
-}
 
 
 
 
-/* Form */
 
-form {
-	display: flex;
-}
-
-textarea {
-	max-width:800px;
-	min-width:200px;
-}
-.main-contact {
-	 display: flex;
-  background-image: url(images/marieiscool-sticker-logo-transparent.png);
-  background-size: 100px;
-  background-position: center;
-  background-repeat: repeat;
-}
-
-#contact {
-	display: flex;
-	border-radius: 5px;
-  background-color: #FFF;
-  padding: 20px;
-}
-.message {
-  height: 300px;
-  width: 500px;
-}
 
 /* Footer
 ------------------------------*/
@@ -393,7 +377,7 @@ footer {
   background: #dee1e1;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  padding: 2em 0 0 3em;
+  padding: 2em 5em 0 5em;
   text-transform: uppercase;
 }
 
@@ -463,76 +447,3 @@ footer {
   text-shadow: none;
 }
 
-/* POPUPS
----------------------------------*/
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-   color: #0a1128;
-  font-family: "Staatliches", cursive;
-  font-weight: 700;
-  font-size: 2rem;
-  margin: 0;
-  padding: 0 5% 0 0;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-align: right;
-  justify-content: space-between;
-  
-}
-
-
-  
-
-/* The actual popup (appears on top) */
-.popup .popuptext {
-  visibility: hidden;
-  width: 360px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -80px;
-  opacity: .85;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -155px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-  visibility: visible;
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-.popuptext p {
-padding: 0 0 0 30px;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity:1 ;}
-}

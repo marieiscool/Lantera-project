@@ -7,30 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+  
   	<header>
   		<div class="main-header">
   			<h1>Marie D'Angelo</h1>
   			<h2>Digital Pioneer, Creative Problem Solver</h2>
   		</div>
-  		<nav class="main-nav">
-        <div class="popup" onclick="popupFunction()"><i class="far fa-paper-plane"></i> Subscribe
-  <span class="popuptext" id="emailPopup"> Get the latest news & tips in your inbox. <p><a href="#link"> Sign up</a></p></span>
-</div>
-
-<script>
-// When the user clicks on <div>, open the popup
-function popupFunction() {
-  var popup = document.getElementById("emailPopup");
-  popup.classList.toggle("show");
-}
-</script>
+  		<nav id="navbar">
+       
   			<a href="#intro">Intro</a>
   			<a href="#experience">Experience</a>
   			<a href="#packages">Services</a>
-  			<a href="contact.html">Contact</a>
+  			<a href="mailto:youknowth@marieiscool.com?Subject=[What's this about?]" target="_blank">Contact</a>
 
   		</nav>
-  		
+
   	</header>
   	<main>
   		<div class="tagline">
@@ -91,7 +82,7 @@ function popupFunction() {
           <h2>Consulting</h2>
           <h3>Starting at $35</h3>
           <p>Advice and guidance when you need it via email, call, or face to face.</p>
-          <a class="button" href="contact.html/?utm_content=consult">Get Started</a>
+          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Consulting inquiry]" target="_blank">Get Started</a>
         </div>
 
         <div>
@@ -101,7 +92,7 @@ function popupFunction() {
           <h2>Coaching</h2>
           <h3>Starting at $175</h3>
           <p>Learn to do it all yourself with step by step instruction online or in person.</p>
-          <a class="button" href="contact.html/?utm_content=coaching">Get Started</a>
+          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Coaching inquiry" target="_blank">Get Started</a>
         </div>
 
         <div>
@@ -111,7 +102,7 @@ function popupFunction() {
           <h2>Strategy</h2>
           <h3>Starting at $600</h3>
           <p>Achieve your goals with a plan to bring your business to the next level.</p>
-          <a class="button" href="contact.html/?utm_content=strategy">Get Started</a>
+          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Strategy inquiry" target="_blank">Get Started</a>
       </div>
   </div>
 </section>
@@ -125,15 +116,33 @@ function popupFunction() {
       <a href="http://www.marieiscool.com/wp-content/uploads/2019/03/Marie-DAngelo-Resume-2019-1.pdf">Resume</a>
       <a href="https://www.linkedin.com/in/mariedangelo/">LinkedIn</a>
       <a href="mailto:youknowth@marieiscool.com">Email</a>
-      <a href="contact.html">Contact</a>
     </nav>
     <nav class=foot-nav-2>
-    	<a href="http://marieiscool.com" alt="logo" target="_blank"><img src="images/marieiscool-sticker-logo-transparent.png"></a>
+    	<a href="http://www.marieiscool.com" alt="logo" target="_blank"><img src="images/marieiscool-sticker-logo-transparent.png"></a>
 
       <a href="http://www.therawaura.com" alt="The Raw Aura Logo" target="_blank"><img src="images/the-raw-aura-logo.png"></a>
     </nav>
     <div> &copy;marieiscool 2019</div>
   </footer>
+  		  <script>
+  // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
 </body>
 
 </html>
