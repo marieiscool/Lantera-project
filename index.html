@@ -1,172 +1,892 @@
-<!doctype html>
-<html>
-  <head>
-  	<link rel="stylesheet" href="style.css">
-  	<script src="https://kit.fontawesome.com/a21ad4475e.js"></script>
-  	<link rel="icon" href="images/marieiscool-sticker-logo-green-16x16.jpg" type="image/gif" sizes="16x16">
-  	<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '2391991454378556');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=2391991454378556&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
-  	<meta property="og:title" content="Marie D'Angelo - Digital Pioneer">
-<meta property="og:image" content="http://marieiscool.com/images/inspiration-point-alaska.jpeg">
-<meta name="description" content="Marie D’Angelo is a Digital Pioneer. She is a creative problem solver with over a decade of strategic and digital marketing experience. Marie has previously worked with major corporations, press, music, art, e-commerce, non-profits, events, causes,and small business. Marie’s favorite tasks include automation, engagement strategy, and data-driven decision making. She is here to help you achieve your goals.">
-<meta name="keywords" content="marieiscool, marie d'angelo, digital strategist, web developer, social media marketer">
-  	
-  	
-    <title>Marie D'Angelo - Digital Pioneer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-  
-  	<header>
-  		<div class="main-header">
-  			<h1>Marie D'Angelo</h1>
-  			<h2>Digital Pioneer, Creative Problem Solver</h2>
-  		</div>
-  		<nav id="navbar">
-       
-  			<a href="#intro">Intro</a>
-  			<a href="#experience">Experience</a>
-  			<a href="#packages">Services</a>
-  			<a href="mailto:youknowth@marieiscool.com?Subject=[What's this about?]" target="_blank">Contact</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marie D'Angelo — UX Designer & Creative Strategist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1410;
+      --cream: #faf6f0;
+      --warm: #f5ede0;
+      --rust: #c4522a;
+      --rust-light: #e8745a;
+      --gold: #c9963a;
+      --sage: #7a9e87;
+      --muted: #8a7f74;
+      --border: #e0d5c8;
+    }
 
-  		</nav>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  	</header>
-  	<main>
-  		<div class="tagline">
-  			<p>Digital Media Pro, loves analyzing data, automating tasks, and driving engagement. Problem solver. Productivity enthusiast. Strategic decision maker. Designer. Creator. Useless fact hoarder. Organized. Skilled. Curious. Efficient.</p>
-  		</div>
-  		<hr>
-	   <section id="intro">
-      <div class="blurb-container">
-          <img src="images/maymont-emerging-bamboo.jpeg" alt="Marie D'Angelo walks out of a bamboo forest" class="intro-image">
+    html { scroll-behavior: smooth; }
 
-        <div class="blurb">
-          <h2>Oh, hey there.</h2>
-		    <p>Marie D’Angelo is a Digital Pioneer. She is a creative problem solver with over a decade of strategic and digital marketing experience. Marie has previously worked with major corporations, press, music, art, e-commerce, non-profits, events, causes,and small business. Marie’s favorite tasks include automation, engagement strategy, and data-driven decision making. She is here to help you achieve your goals.</p>
-		    <p>Also, she’s totally awesome.</p>
-        </div>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--rust); }
+    .nav-cta {
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--cream);
+      background: var(--rust); padding: 0.6rem 1.4rem;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--rust-light); }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 5rem 4rem 5rem 5rem;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--rust);
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--rust);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 900; line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    h1 em {
+      font-style: italic; color: var(--rust);
+    }
+    .hero-sub {
+      font-size: 1.05rem; line-height: 1.7;
+      color: var(--muted); max-width: 440px;
+      margin-bottom: 2.5rem;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin-bottom: 2.5rem;
+    }
+    .badge {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 0.35rem 0.85rem;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+    .badge.featured {
+      background: var(--gold); color: var(--cream); border-color: var(--gold);
+    }
+    .hero-actions { display: flex; gap: 1rem; align-items: center; }
+    .btn-primary {
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--cream);
+      background: var(--ink); padding: 0.9rem 2rem;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .btn-primary:hover { background: var(--rust); }
+    .btn-ghost {
+      font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      text-decoration: none; display: flex; align-items: center; gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--rust); }
+    .hero-right {
+      position: relative; overflow: hidden;
+      background: var(--warm);
+    }
+    .hero-right img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center top;
+      opacity: 0.9;
+      mix-blend-mode: multiply;
+    }
+    .hero-right::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(196,82,42,0.15) 0%, transparent 60%);
+    }
+    .hero-scroll-hint {
+      position: absolute; bottom: 2.5rem; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    .hero-scroll-hint::after {
+      content: '↓';
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 6rem 5rem; }
+    .section-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--rust);
+      margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 24px; height: 1px; background: var(--rust);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700; line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .divider {
+      width: 100%; height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    /* ── AWARDS BAR ── */
+    #awards-bar {
+      background: var(--ink); color: var(--cream);
+      padding: 1.2rem 5rem;
+      display: flex; align-items: center; gap: 3rem;
+      overflow: hidden;
+    }
+    .award-item {
+      display: flex; align-items: center; gap: 1rem;
+      white-space: nowrap; flex-shrink: 0;
+    }
+    .award-icon { font-size: 1.3rem; }
+    .award-text { font-size: 0.78rem; letter-spacing: 0.04em; }
+    .award-text strong { color: var(--gold); }
+    .award-sep {
+      width: 4px; height: 4px; border-radius: 50%;
+      background: var(--rust); flex-shrink: 0;
+    }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--warm);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+    .about-text p {
+      font-size: 1rem; line-height: 1.8; color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+    .about-text p strong { color: var(--ink); font-weight: 500; }
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+    }
+    .stat-box {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      background: var(--cream);
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; font-weight: 900;
+      color: var(--rust); line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 0.78rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ── WORK / VENTURES ── */
+    #ventures { background: var(--cream); }
+    .ventures-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--border);
+      margin-top: 3rem;
+    }
+    .venture-card {
+      background: var(--cream);
+      padding: 2.5rem 2rem;
+      transition: background 0.2s;
+    }
+    .venture-card:hover { background: var(--warm); }
+    .venture-card.featured-card {
+      grid-column: span 2;
+      background: var(--ink); color: var(--cream);
+    }
+    .venture-card.featured-card:hover { background: #2a221a; }
+    .venture-tag {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--rust);
+      margin-bottom: 1rem;
+    }
+    .venture-card.featured-card .venture-tag { color: var(--rust-light); }
+    .venture-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700;
+      margin-bottom: 0.8rem; line-height: 1.3;
+    }
+    .venture-card.featured-card .venture-title { color: var(--cream); }
+    .venture-desc {
+      font-size: 0.88rem; line-height: 1.7; color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .venture-card.featured-card .venture-desc { color: rgba(250,246,240,0.7); }
+    .venture-year {
+      font-size: 0.72rem; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--border);
+    }
+    .venture-card:not(.featured-card) .venture-year { color: var(--border); }
+    /* make border visible on light cards */
+    .venture-card:not(.featured-card) .venture-year { color: #c5b9ac; }
+
+    /* ── CASE STUDIES ── */
+    #case-studies { background: var(--warm); }
+    .case-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .case-card {
+      border: 1px solid var(--border);
+      padding: 2rem;
+      position: relative;
+      background: var(--cream);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .case-card:hover {
+      border-color: var(--rust);
+      transform: translateY(-2px);
+    }
+    .case-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem; font-weight: 900; line-height: 1;
+      color: var(--border);
+      position: absolute; top: 1.5rem; right: 1.5rem;
+    }
+    .case-tag {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--rust);
+      margin-bottom: 0.8rem;
+    }
+    .case-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 0.6rem; line-height: 1.3;
+    }
+    .case-desc {
+      font-size: 0.88rem; line-height: 1.7; color: var(--muted);
+    }
+    .case-skills {
+      display: flex; flex-wrap: wrap; gap: 0.4rem;
+      margin-top: 1.2rem;
+    }
+    .skill-tag {
+      font-size: 0.68rem; letter-spacing: 0.05em;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--border); color: var(--muted);
+    }
+
+    /* ── EXPERIENCE TIMELINE ── */
+    #experience { background: var(--cream); }
+    .timeline {
+      margin-top: 3rem;
+      border-left: 2px solid var(--border);
+      padding-left: 3rem;
+      position: relative;
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -3.4rem; top: 0.3rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--rust);
+      border: 2px solid var(--cream);
+    }
+    .timeline-period {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .timeline-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .timeline-org {
+      font-size: 0.88rem; color: var(--rust);
+      margin-bottom: 0.6rem; font-weight: 500;
+    }
+    .timeline-desc {
+      font-size: 0.88rem; line-height: 1.7; color: var(--muted);
+      max-width: 600px;
+    }
+
+    /* ── SKILLS ── */
+    #skills { background: var(--warm); }
+    .skills-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .skill-group h3 {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--rust);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .skill-list {
+      list-style: none;
+    }
+    .skill-list li {
+      font-size: 0.88rem; line-height: 1.6;
+      color: var(--muted); padding: 0.3rem 0;
+    }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--ink); color: var(--cream); }
+    #testimonials .section-label { color: var(--rust-light); }
+    #testimonials .section-label::before { background: var(--rust-light); }
+    #testimonials h2 { color: var(--cream); }
+    .testimonial-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; margin-top: 3rem;
+    }
+    .testimonial-card {
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .testimonial-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1rem; line-height: 1.7;
+      color: rgba(250,246,240,0.85);
+      margin-bottom: 1.2rem;
+    }
+    .testimonial-source {
+      font-size: 0.72rem; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--rust-light);
+    }
+
+    /* ── CONTACT ── */
+    #contact {
+      background: var(--cream);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+    .contact-info p {
+      font-size: 1rem; line-height: 1.8; color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-link {
+      font-size: 0.88rem; font-weight: 500; letter-spacing: 0.04em;
+      color: var(--ink); text-decoration: none;
+      display: flex; align-items: center; gap: 0.8rem;
+      transition: color 0.2s;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-link:hover { color: var(--rust); }
+    .contact-link .link-arrow { margin-left: auto; }
+    .services-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+    .service-item {
+      background: var(--warm);
+      padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700;
+    }
+    .service-price {
+      font-size: 0.78rem; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--rust);
+    }
+    .service-desc {
+      font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink); color: rgba(250,246,240,0.5);
+      padding: 2rem 5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 0.78rem; letter-spacing: 0.04em;
+    }
+    footer a { color: var(--rust-light); text-decoration: none; }
+    footer a:hover { color: var(--cream); }
+
+    /* ── ANIMATIONS ── */
+    .fade-up {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1; transform: translateY(0);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      section { padding: 4rem 1.5rem; }
+      #hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 6rem 1.5rem 3rem; }
+      .hero-right { height: 60vw; }
+      #about { grid-template-columns: 1fr; gap: 2.5rem; }
+      .ventures-grid { grid-template-columns: 1fr; }
+      .venture-card.featured-card { grid-column: span 1; }
+      .case-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonial-grid { grid-template-columns: 1fr; }
+      #contact { grid-template-columns: 1fr; gap: 2.5rem; }
+      #awards-bar { padding: 1.2rem 1.5rem; gap: 1.5rem; flex-wrap: wrap; }
+      footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Marie D'Angelo</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#ventures">Work</a></li>
+      <li><a href="#case-studies">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="mailto:youknowth@marieiscool.com?subject=Let's work together" class="nav-cta">Get in Touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Richmond, Virginia</div>
+      <h1>
+        Designing<br>
+        <em>experiences</em><br>
+        that build<br>community.
+      </h1>
+      <p class="hero-sub">
+        UX Designer, Digital Strategist & Entrepreneurial Leader. I bridge technology, community organizing, and creative marketing to build platforms that actually matter.
+      </p>
+      <div class="hero-badges">
+        <span class="badge featured">★ Style Weekly Top 40 Under 40, 2024</span>
+        <span class="badge">Webby Award Honoree</span>
+        <span class="badge">20+ Years Experience</span>
       </div>
-	    </section>
-	    <section id="seg">
-	    	<h4>>> People Think I'm Good At This <<</h4>
-	    </section>
-	    <section id="experience">
-      <div class="recs">
-        <div class="quote">
-          <p class="quotation">Marie is a digital professional with a deep understanding of rapidly changing digital media and data-driven communications. We rely on Marie to ensure that our digital comms reach their full potential. Marie is both strategic and highly detailed in her work. She has managed digital strategy, email and social channels excellently, building engagement and community with focus and flexibility. I highly recommend her.</p>
-          <a href="https://www.linkedin.com/in/mariedangelo/?utm_content=maz" class="cite"> &mdash; says her last boss</a>
-        </div>
-        <div>
-          <img src="images/inspiration-point-alaska.jpeg" alt="alaska inspiration point" class="image">
-        </div>
+      <div class="hero-actions">
+        <a href="#case-studies" class="btn-primary">View My Work</a>
+        <a href="https://www.linkedin.com/in/mariedangelo" target="_blank" class="btn-ghost">LinkedIn →</a>
       </div>
-      <div class="recs">
-      <div class="quote">
-          <p class="quotation">Marie is a social media expert. She was initially hired to help with MySpace. Since then, she's mastered every platform implemented. She's a creative indispensable team player who takes initiative.</p>
-          <a href="https://www.linkedin.com/in/mariedangelo/?utm_content=dynasty" class="cite"> &mdash; a pioneer from the start</a>
-        </div>
-        <div>
-          <img src="images/lickinghole-creek-sunflowers.jpeg" alt="Marie at Lickinghole Creek in the sunflowers" class="image">
-        </div>
-      </div>
-      <div class="recs">
-        <div class="quote">
-          <p class="quotation">Marie was a dedicated, self-starter and professional member of the team. She worked hard, offered suggestions and ideas to help the department. I would not hesitate to hire Marie again and would welcome the opportunity to work with her again.</p>
-          <a href="https://www.linkedin.com/in/mariedangelo/?utm_content=universal" class="cite"> &mdash; out of this world, corporate approved</a>
-        </div>
-        <div>
-          <img src="images/out-of-this-world.jpeg" alt="space-trip" class="image">
-        </div>
-      </div>
-</section>
-<section id="packages">
+    </div>
+    <div class="hero-right">
+      <img src="https://marieiscool.github.io/Lantera-project/images/lickinghole-creek-sunflowers.jpeg" alt="Marie D'Angelo" />
+    </div>
+    <div class="hero-scroll-hint">Scroll</div>
+  </section>
 
-	<h4 id="packages-heading">What I can Do for You</h2>
-      <div class="grid-container">
-        <div>
-        	<span style="color: #640035">
-          <i class="fas fa-brain fa-5x"></i>
-      </span>
-          <h2>Consulting</h2>
-          <h3>Starting at $35</h3>
-          <p>Advice and guidance when you need it via email, call, or face to face.</p>
-          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Consulting inquiry]" target="_blank">Get Started</a>
-        </div>
-
-        <div>
-        	<span style="color: #640035">
-          <i class="fas fa-chalkboard-teacher fa-5x"></i>
-      </span>
-          <h2>Coaching</h2>
-          <h3>Starting at $175</h3>
-          <p>Learn to do it all yourself with step by step instruction online or in person.</p>
-          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Coaching inquiry" target="_blank">Get Started</a>
-        </div>
-
-        <div>
-        	<span style="color: #640035">
-          <i class="fas fa-magic fa-5x"></i>
-      </span>
-          <h2>Strategy</h2>
-          <h3>Starting at $600</h3>
-          <p>Achieve your goals with a plan to bring your business to the next level.</p>
-          <a class="button" href="mailto:youknowth@marieiscool.com?Subject=Strategy inquiry" target="_blank">Get Started</a>
-      </div>
+  <!-- AWARDS BAR -->
+  <div id="awards-bar">
+    <div class="award-item">
+      <span class="award-icon">★</span>
+      <span class="award-text"><strong>Style Weekly Top 40 Under 40</strong> — Creative Problem Solver, 2024</span>
+    </div>
+    <div class="award-sep"></div>
+    <div class="award-item">
+      <span class="award-icon">🏆</span>
+      <span class="award-text"><strong>Webby Award Honoree</strong> — Activism Category</span>
+    </div>
+    <div class="award-sep"></div>
+    <div class="award-item">
+      <span class="award-icon">🎓</span>
+      <span class="award-text">General Assembly <strong>UX Design Immersive</strong> · Lantera Labs <strong>Front-End Dev</strong> · Harvard X CS50</span>
+    </div>
   </div>
-</section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-text fade-up">
+      <div class="section-label">About</div>
+      <h2>Chaos Coordinator.<br>Creative Strategist.</h2>
+      <div class="divider"></div>
+      <p>
+        I'm a <strong>data-driven strategist, community organizer, and entrepreneur</strong> who uses UX design and digital marketing to build inclusive, thriving platforms. My work spans technology, events, and community building — all rooted in Richmond, Virginia.
+      </p>
+      <p>
+        My career has taken me from <strong>Universal Music Group</strong> to feminist crowdfunding at <strong>Catapult.org</strong>, from building a Webby Award-winning campaign to founding one of Richmond's most beloved pop-up markets from the ground up.
+      </p>
+      <p>
+        Known to my team as the "chaos coordinator," I expertly manage complex logistics, digital transformations, and high-profile community events — often all at once.
+      </p>
+    </div>
+    <div class="about-stats fade-up">
+      <div class="stat-box">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Years in Digital Strategy</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">400+</div>
+        <div class="stat-label">Grant Projects Managed</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Market Series Founded</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Useless Facts Hoarded</div>
+      </div>
+    </div>
+  </section>
 
-    
-  </main>
+  <!-- VENTURES -->
+  <section id="ventures">
+    <div class="section-label fade-up">Entrepreneurial Work</div>
+    <h2 class="fade-up">Building things<br>from the ground up.</h2>
+    <div class="ventures-grid">
+      <div class="venture-card featured-card fade-up">
+        <div class="venture-tag">Flagship Venture · Nov 2019 – Present</div>
+        <div class="venture-title">Richmond Makers Market</div>
+        <p class="venture-desc">
+          Founded a recurring pop-up market providing local artists a supportive, non-competitive environment to sell handmade goods. Rapidly scaled to host thousands of attendees. Pivoted overnight to a virtual format during COVID-19 to protect vendor revenue. Expanded to launch four distinct market series: RVA Makers Market, Basic City Markets (Waynesboro), Market Days at the Cultural Arts Center at Glen Allen, and RVA Growers Market.
+        </p>
+        <div class="venture-year">Founder & Director</div>
+      </div>
+      <div class="venture-card fade-up">
+        <div class="venture-tag">2024 – Present</div>
+        <div class="venture-title">RVA Growers Market</div>
+        <p class="venture-desc">
+          Co-founded a producer-only farmers market in Manchester bringing food justice initiatives, free community space for nonprofits, and donation-based programming to an underserved neighborhood.
+        </p>
+        <div class="venture-year">Co-Founder</div>
+      </div>
+      <div class="venture-card fade-up">
+        <div class="venture-tag">Community · Coming Soon</div>
+        <div class="venture-title">Highland Park Community Space</div>
+        <p class="venture-desc">
+          Co-developing a new community-centered retail and gathering space in Highland Park, curating local art and artisan goods alongside a business partner.
+        </p>
+        <div class="venture-year">Co-Owner</div>
+      </div>
+      <div class="venture-card fade-up">
+        <div class="venture-tag">Feb 2005 – Present</div>
+        <div class="venture-title">Digital Media Consulting</div>
+        <p class="venture-desc">
+          Custom strategies, workflow automation, dashboard builds, and campaign management (grassroots to major media buys) for small businesses, musicians, nonprofits, and start-ups.
+        </p>
+        <div class="venture-year">Independent Consultant</div>
+      </div>
+    </div>
+  </section>
 
-  <footer id="footer">
-    <nav class=foot-nav>
-      <a href="http://www.marieiscool.com/wp-content/uploads/2019/03/Marie-DAngelo-Resume-2019-1.pdf">Resume</a>
-      <a href="https://www.linkedin.com/in/mariedangelo/">LinkedIn</a>
-      <a href="mailto:youknowth@marieiscool.com">Email</a>
-    </nav>
-    <nav class=foot-nav-2>
-    	<a href="http://www.marieiscool.com" alt="logo" target="_blank"><img src="images/marieiscool-sticker-logo-transparent.png"></a>
+  <!-- CASE STUDIES -->
+  <section id="case-studies">
+    <div class="section-label fade-up">Selected Projects</div>
+    <h2 class="fade-up">UX & Digital Strategy<br>Case Studies</h2>
+    <div class="case-grid">
+      <div class="case-card fade-up">
+        <div class="case-number">01</div>
+        <div class="case-tag">Email & Social Campaign</div>
+        <div class="case-title">Cover Stories — Catapult.org</div>
+        <p class="case-desc">Executed a provocative campaign highlighting underserved issues facing women globally. Result: 100% funding of all associated grant projects.</p>
+        <div class="case-skills">
+          <span class="skill-tag">Email Marketing</span>
+          <span class="skill-tag">Social Strategy</span>
+          <span class="skill-tag">Campaign Management</span>
+        </div>
+      </div>
+      <div class="case-card fade-up">
+        <div class="case-number">02</div>
+        <div class="case-tag">UX Design · Shopify Development</div>
+        <div class="case-title">Octave Jewelry</div>
+        <p class="case-desc">Led end-to-end UX: research, wireframing, visual design, usability testing, and Shopify build with custom CSS/HTML modifications.</p>
+        <div class="case-skills">
+          <span class="skill-tag">UX Research</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Shopify</span>
+          <span class="skill-tag">CSS/HTML</span>
+        </div>
+      </div>
+      <div class="case-card fade-up">
+        <div class="case-number">03</div>
+        <div class="case-tag">Web Design · Squarespace</div>
+        <div class="case-title">Raw Milk Retreats</div>
+        <p class="case-desc">Designed a comprehensive site for international wellness retreats on Squarespace with custom CSS and integrated booking management.</p>
+        <div class="case-skills">
+          <span class="skill-tag">Web Design</span>
+          <span class="skill-tag">Custom CSS</span>
+          <span class="skill-tag">Booking Systems</span>
+        </div>
+      </div>
+      <div class="case-card fade-up">
+        <div class="case-number">04</div>
+        <div class="case-tag">HTML · CSS · JavaScript</div>
+        <div class="case-title">Alfredo's Honey</div>
+        <p class="case-desc">Developed a fully responsive website for a local beekeeper using vanilla HTML, CSS, and JavaScript.</p>
+        <div class="case-skills">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Responsive Design</span>
+        </div>
+      </div>
+      <div class="case-card fade-up">
+        <div class="case-number">05</div>
+        <div class="case-tag">Community & Fan Engagement</div>
+        <div class="case-title">Greek Fire Family</div>
+        <p class="case-desc">Served as Community Director for an innovative fan interaction project — digital marketing, event organizing, and building a loyal engaged fanbase.</p>
+        <div class="case-skills">
+          <span class="skill-tag">Community Building</span>
+          <span class="skill-tag">Digital Marketing</span>
+          <span class="skill-tag">Event Production</span>
+        </div>
+      </div>
+      <div class="case-card fade-up">
+        <div class="case-number">06</div>
+        <div class="case-tag">Strategy · Analytics</div>
+        <div class="case-title">Catapult.org — 191+ Partner CRM</div>
+        <p class="case-desc">Managed CRM for 191+ feminist nonprofits, optimized paid social via A/B testing, and oversaw communication strategy across 400+ grant projects.</p>
+        <div class="case-skills">
+          <span class="skill-tag">CRM</span>
+          <span class="skill-tag">Paid Social</span>
+          <span class="skill-tag">A/B Testing</span>
+          <span class="skill-tag">Analytics</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <a href="http://www.rvamakersmarket.us" alt="richmond makers market logo" target="_blank"><img src="images/rva-makers-market-logo.png"></a>
-    </nav>
-    <div> &copy;marieiscool 2019</div>
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience">
+    <div class="section-label fade-up">Professional History</div>
+    <h2 class="fade-up">Where I've been.</h2>
+    <div class="timeline">
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2019 – Present</div>
+        <div class="timeline-role">Founder & Director</div>
+        <div class="timeline-org">Richmond Makers Market</div>
+        <p class="timeline-desc">Established and scaled Richmond's premier pop-up market for handmade goods; grew to thousands of attendees; launched multiple sub-market brands.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2017 – 2020</div>
+        <div class="timeline-role">Co-Owner & Director</div>
+        <div class="timeline-org">The Raw Aura</div>
+        <p class="timeline-desc">Directed a handmade crystal and gemstone jewelry business — web design, digital strategy, analytics, paid social, purchasing, pricing, and visual merchandising.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2014 – 2016</div>
+        <div class="timeline-role">Digital Strategist & Associate Strategist</div>
+        <div class="timeline-org">Catapult.org</div>
+        <p class="timeline-desc">Led social and email strategy for a feminist crowdfunding platform. Managed CRM for 191+ partner orgs and 400+ grant projects. Webby Award–winning campaign work.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2013 – 2014</div>
+        <div class="timeline-role">Digital Communication Specialist</div>
+        <div class="timeline-org">Women Deliver</div>
+        <p class="timeline-desc">Designed communications strategies and executed content migration for 180+ projects.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2007 – 2012</div>
+        <div class="timeline-role">Session & Campaign Coordinator / Finance Administration</div>
+        <div class="timeline-org">Universal Music Group</div>
+        <p class="timeline-desc">Marketing finance, invoicing, auditing, vendor management, and IT purchasing across major music marketing campaigns.</p>
+      </div>
+      <div class="timeline-item fade-up">
+        <div class="timeline-period">2005 – Present</div>
+        <div class="timeline-role">Digital Media Consultant</div>
+        <div class="timeline-org">Independent</div>
+        <p class="timeline-desc">20 years of custom strategy, workflow automation, and campaign management for small businesses, musicians, nonprofits, and start-ups.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label fade-up">Capabilities</div>
+    <h2 class="fade-up">What I bring<br>to the table.</h2>
+    <div class="skills-grid">
+      <div class="skill-group fade-up">
+        <h3>UX / UI Design</h3>
+        <ul class="skill-list">
+          <li>UX Research & Strategy</li>
+          <li>Wireframing & Prototyping</li>
+          <li>Usability Testing</li>
+          <li>Contextual Interviews</li>
+          <li>Systems Design</li>
+          <li>Figma · Sketch · Adobe XD</li>
+        </ul>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>Development</h3>
+        <ul class="skill-list">
+          <li>HTML5 · CSS3 · JavaScript</li>
+          <li>Responsive Design</li>
+          <li>Shopify · Squarespace · WP</li>
+          <li>Bootstrap · GIT</li>
+          <li>Agile / SCRUM</li>
+        </ul>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>Digital Marketing</h3>
+        <ul class="skill-list">
+          <li>Digital Strategy</li>
+          <li>Paid Social Media</li>
+          <li>Email Marketing</li>
+          <li>SEO · Content Creation</li>
+          <li>Campaign Management</li>
+          <li>Brand Management</li>
+        </ul>
+      </div>
+      <div class="skill-group fade-up">
+        <h3>Data & Tools</h3>
+        <ul class="skill-list">
+          <li>A/B Testing · Analytics</li>
+          <li>Automation & Workflows</li>
+          <li>Airtable · Asana · Zapier</li>
+          <li>Mailchimp · Hootsuite</li>
+          <li>Adobe Creative Suite</li>
+          <li>Square POS</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-label">Kind words</div>
+    <h2>People think<br>I'm good at this.</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card fade-up">
+        <p class="testimonial-text">"Marie is a digital professional with a deep understanding of rapidly changing digital media and data-driven communications. She has managed digital strategy, email and social channels excellently, building engagement and community with focus and flexibility."</p>
+        <div class="testimonial-source">— Former Director</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <p class="testimonial-text">"Marie is a social media expert. She was initially hired to help with MySpace. Since then, she's mastered every platform implemented. She's a creative, indispensable team player who takes initiative."</p>
+        <div class="testimonial-source">— Pioneer from the Start</div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <p class="testimonial-text">"Marie was a dedicated, self-starter and professional member of the team. She worked hard, offered suggestions and ideas to help the department. I would not hesitate to hire Marie again."</p>
+        <div class="testimonial-source">— Corporate Approved</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-info fade-up">
+      <div class="section-label">Contact</div>
+      <h2>Let's build<br>something together.</h2>
+      <div class="divider"></div>
+      <p>
+        Whether you need UX design, a digital strategy, campaign management, or someone to help your small business thrive — I'm here for it.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:youknowth@marieiscool.com" class="contact-link">
+          youknowth@marieiscool.com
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="https://www.linkedin.com/in/mariedangelo" target="_blank" class="contact-link">
+          LinkedIn Profile
+          <span class="link-arrow">→</span>
+        </a>
+        <a href="http://www.marieiscool.com" target="_blank" class="contact-link">
+          marieiscool.com
+          <span class="link-arrow">→</span>
+        </a>
+      </div>
+    </div>
+    <div class="fade-up">
+      <div class="section-label">Services</div>
+      <div class="services-list">
+        <div class="service-item">
+          <div>
+            <div class="service-name">Consulting</div>
+            <div class="service-desc">Advice & guidance via email, call, or in person.</div>
+          </div>
+          <div class="service-price">From $35</div>
+        </div>
+        <div class="service-item">
+          <div>
+            <div class="service-name">Coaching</div>
+            <div class="service-desc">Step-by-step instruction, online or in person.</div>
+          </div>
+          <div class="service-price">From $175</div>
+        </div>
+        <div class="service-item">
+          <div>
+            <div class="service-name">Strategy</div>
+            <div class="service-desc">A full plan to bring your business to the next level.</div>
+          </div>
+          <div class="service-price">From $600</div>
+        </div>
+        <div class="service-item">
+          <div>
+            <div class="service-name">UX Design</div>
+            <div class="service-desc">Research, wireframes, prototypes, and builds.</div>
+          </div>
+          <div class="service-price">Let's talk</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2025 Marie D'Angelo — Richmond, Virginia</span>
+    <span>
+      <a href="mailto:youknowth@marieiscool.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/mariedangelo" target="_blank">LinkedIn</a> ·
+      <a href="http://www.rvamakersmarket.us" target="_blank">RVA Makers Market</a>
+    </span>
   </footer>
-  		  <script>
-  // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
 
-// Get the navbar
-var navbar = document.getElementById("navbar");
+  <script>
+    // Intersection Observer for fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
-
 </html>
